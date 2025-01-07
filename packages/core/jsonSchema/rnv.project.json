@@ -778,7 +778,7 @@
                                             },
                                             "buildToolsVersion": {
                                                 "type": "string",
-                                                "default": "34.0.0",
+                                                "default": "35.0.0",
                                                 "description": "Override android build tools version"
                                             },
                                             "disableSigning": {

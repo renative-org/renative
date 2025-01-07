@@ -91,7 +91,7 @@ describe('packageReactNativeIOS', () => {
 
         // THEN
         expect(executeAsync).toHaveBeenCalledWith(
-            'node path/to/react-native/local-cli/cli.js bundle --platform ios --dev true --assets-dest platformBuilds/com.test_ios --entry-file index.js --bundle-output /mocked/app/folder/main.jsbundle --sourcemap-output /mocked/app/folder/main.jsbundle.map --config=metro.config.js',
+            'node path/to/react-native/cli.js bundle --platform ios --dev true --assets-dest platformBuilds/com.test_ios --entry-file index.js --bundle-output /mocked/app/folder/main.jsbundle --sourcemap-output /mocked/app/folder/main.jsbundle.map --config=metro.config.js',
             {
                 env: {
                     BASE_VAR: 'mockedBaseValue',
@@ -112,7 +112,7 @@ describe('packageReactNativeIOS', () => {
 
         // THEN
         expect(executeAsync).toHaveBeenCalledWith(
-            'node path/to/react-native/local-cli/cli.js bundle --platform ios --dev false --assets-dest platformBuilds/com.test_ios --entry-file index.js --bundle-output /mocked/app/folder/main.jsbundle --sourcemap-output /mocked/app/folder/main.jsbundle.map --config=metro.config.js',
+            'node path/to/react-native/cli.js bundle --platform ios --dev false --assets-dest platformBuilds/com.test_ios --entry-file index.js --bundle-output /mocked/app/folder/main.jsbundle --sourcemap-output /mocked/app/folder/main.jsbundle.map --config=metro.config.js',
             {
                 env: {
                     BASE_VAR: 'mockedBaseValue',

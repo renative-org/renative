@@ -1,5 +1,5 @@
 import path from 'path';
-import { getConfigProp, fsWriteFileSync, getAppFolder, doResolve, logError } from '@rnv/core';
+import { getConfigProp, fsWriteFileSync, getAppFolder, doResolve, logError, fsExistsSync } from '@rnv/core';
 import { getAppFolderName } from './common';
 
 export const parsePrivacyManifest = () => {
@@ -27,7 +27,7 @@ export const parsePrivacyManifest = () => {
                             return `<string>${reason}</string>`;
                         }).join('\n')}
                         </array>
-                    <dict>
+                    </dict>
                 `;
                 })
                 .join('')}
@@ -39,25 +39,34 @@ export const parsePrivacyManifest = () => {
             const appFolder = getAppFolder();
             const appFolderName = getAppFolderName();
 
-            const filePath = path.join(appFolder, `${appFolderName}/PrivacyInfo.xcprivacy`);
-            fsWriteFileSync(filePath, output);
+            const primaryPath = path.join(appFolder, 'PrivacyInfo.xcprivacy');
+            const secondaryPath = path.join(appFolder, `${appFolderName}/PrivacyInfo.xcprivacy`);
 
-            const xcodePath = doResolve('xcode');
-            if (!xcodePath) {
-                logError(`Cannot resolve xcode path`);
+            if (fsExistsSync(primaryPath) || fsExistsSync(secondaryPath)) {
+                const existingFilePath = fsExistsSync(primaryPath) ? primaryPath : secondaryPath;
+                fsWriteFileSync(existingFilePath, output);
                 resolve();
-                return;
+            } else {
+                const filePath = secondaryPath;
+                fsWriteFileSync(filePath, output);
+
+                const xcodePath = doResolve('xcode');
+                if (!xcodePath) {
+                    logError(`Cannot resolve xcode path`);
+                    resolve();
+                    return;
+                }
+
+                const xcode = require(xcodePath);
+                const projectPath = path.join(appFolder, `${appFolderName}.xcodeproj/project.pbxproj`);
+                const xcodeProj = xcode.project(projectPath);
+
+                xcodeProj.parse(() => {
+                    xcodeProj.addResourceFile(filePath);
+                    fsWriteFileSync(projectPath, xcodeProj.writeSync());
+                    resolve();
+                });
             }
-
-            const xcode = require(xcodePath);
-            const projectPath = path.join(appFolder, `${appFolderName}.xcodeproj/project.pbxproj`);
-            const xcodeProj = xcode.project(projectPath);
-
-            xcodeProj.parse(() => {
-                xcodeProj.addResourceFile(filePath);
-                fsWriteFileSync(projectPath, xcodeProj.writeSync());
-                resolve();
-            });
         } else {
             resolve();
         }

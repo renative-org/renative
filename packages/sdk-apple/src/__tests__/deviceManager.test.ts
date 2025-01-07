@@ -1,11 +1,10 @@
 import { createRnvContext, getContext } from '@rnv/core';
 import { getAppleDevices } from '../deviceManager';
-import listIOSDevices from '@react-native-community/cli-platform-ios/build/tools/listIOSDevices';
+import listIOSDevices from '@react-native-community/cli-platform-apple/build/tools/listDevices';
 import { DeviceType } from '../types';
 
 const devices: DeviceType[] = [
     {
-        modelName: 'MacBook Pro',
         isAvailable: true,
         name: 'My Mac',
         udid: 'D9B9188D-C38B-59D9-A1BD-5E4081F6EDA1',
@@ -14,7 +13,6 @@ const devices: DeviceType[] = [
         type: 'device',
     },
     {
-        modelName: 'iPhone 15',
         isAvailable: true,
         name: 'iPhone 15',
         udid: 'ABF470AF-2538-4047-94A8-D72E22EB15BF',
@@ -23,7 +21,6 @@ const devices: DeviceType[] = [
         type: 'device',
     },
     {
-        modelName: 'iPhone 15 Pro',
         isAvailable: true,
         name: 'iPhone 15 Pro',
         udid: '04264D6F-0223-4AC6-9D05-8449DFDC6C3B',
@@ -32,7 +29,6 @@ const devices: DeviceType[] = [
         type: 'simulator',
     },
     {
-        modelName: 'iPad Pro (11-inch) (4th generation)',
         isAvailable: true,
         name: 'iPad Pro (11-inch) (4th generation)',
         udid: '59853D87-6F6C-4A6E-9F9C-A9C335F86647',
@@ -42,7 +38,7 @@ const devices: DeviceType[] = [
     },
 ];
 
-jest.mock('@react-native-community/cli-platform-ios/build/tools/listIOSDevices');
+jest.mock('@react-native-community/cli-platform-apple/build/tools/listDevices');
 jest.mock('@rnv/core');
 
 beforeEach(() => {

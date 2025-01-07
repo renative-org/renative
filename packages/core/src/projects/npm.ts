@@ -12,13 +12,13 @@ import { isOfflineMode } from './utils';
 export const checkIfProjectAndNodeModulesExists = async () => {
     logDefault('checkIfProjectAndNodeModulesExists');
 
-    const c = getContext();
+    // const c = getContext();
 
-    if (c.paths.project.configExists && !fsExistsSync(c.paths.project.nodeModulesDir)) {
-        c._requiresNpmInstall = false;
-        logInfo('node_modules folder is missing. INSTALLING...');
-        await installPackageDependencies();
-    }
+    // if (c.paths.project.configExists && !fsExistsSync(c.paths.project.nodeModulesDir)) {
+    //     c._requiresNpmInstall = false;
+    //     logInfo('node_modules folder is missing. INSTALLING...');
+    //     await installPackageDependencies();
+    // }
 };
 
 export const checkNpxIsInstalled = async () => {

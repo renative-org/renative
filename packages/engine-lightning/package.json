@@ -36,12 +36,13 @@
         "@lightningjs/sdk": "5.5.1",
         "@rnv/sdk-tizen": "1.9.0-rc.0",
         "@rnv/sdk-utils": "1.9.0-rc.0",
-        "@rnv/sdk-webos": "1.9.0-rc.0"
+        "@rnv/sdk-webos": "1.9.0-rc.0",
+        "rimraf": "2.6.2",
+        "typescript": "5.2.2"
     },
     "peerDependencies": {
         "@rnv/core": "^1.9.0-rc.0"
     },
-    "private": false,
     "publishConfig": {
         "access": "public"
     },

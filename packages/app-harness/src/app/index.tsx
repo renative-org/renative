@@ -54,11 +54,11 @@ const App = () => (
 );
 
 const AppContent = () => {
-    const orientationBtnRef = useRef<TouchableOpacity>(null);
-    const permissionBtnRef = useRef<TouchableOpacity>(null);
-    const splashBtnRef = useRef<TouchableOpacity>(null);
-    const photoEditorBtnRef = useRef<TouchableOpacity>(null);
-    const nativeModuleBtnRef = useRef<TouchableOpacity>(null);
+    const orientationBtnRef = useRef<React.ElementRef<typeof TouchableOpacity>>(null);
+    const permissionBtnRef = useRef<React.ElementRef<typeof TouchableOpacity>>(null);
+    const splashBtnRef = useRef<React.ElementRef<typeof TouchableOpacity>>(null);
+    const photoEditorBtnRef = useRef<React.ElementRef<typeof TouchableOpacity>>(null);
+    const nativeModuleBtnRef = useRef<React.ElementRef<typeof TouchableOpacity>>(null);
     const [showVideo, setShowVideo] = useState(false);
     const [logsFocused, setLogsFocused] = useState(false);
     const { logDebug, logs } = useLoggerContext();

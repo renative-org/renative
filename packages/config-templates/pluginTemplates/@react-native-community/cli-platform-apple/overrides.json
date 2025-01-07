@@ -1,0 +1,12 @@
+{
+    "overrides": {
+        "build/tools/listDevices.js": {
+            "const parsedSimctlOutput = Object.keys(simctlOutput.devices).map(key => simctlOutput.devices[key]).reduce((acc, val) => acc.concat(val), []);": "const parsedSimctlOutput = Object.keys(simctlOutput.devices)\n  .map(key => {\n    const runtimeVersionMatch = key.match(/-(\\d+-\\d+)/);\n    const runtimeVersion = runtimeVersionMatch ? runtimeVersionMatch[1].replace('-', '.') : null;\n    return simctlOutput.devices[key].map(sim => ({ ...sim, version: runtimeVersion, }));\n  }).reduce((acc, val) => acc.concat(val), []);  // <= PATCHED BY RENATIVE",
+            "rawOutput.filter(device => sdkNames.includes(stripPlatform(device === null || device === void 0 ? void 0 : device.platform))).sort(device => device.simulator ? 1 : -1).map(device => {":"rawOutput.sort(device => device.simulator ? 1 : -1).map(device => { // <= PATCHED BY RENATIVE"
+        },
+        "build/commands/runCommand/installApp.js": {
+            "}).trim();":"\n  _child_process().default.spawnSync('xcrun', ['simctl', 'terminate', udid, bundleID]); // <= PATCHED BY RENATIVE"
+        } 
+    }
+}
+ 

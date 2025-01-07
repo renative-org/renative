@@ -122,12 +122,11 @@
         "react": "18.3.1",
         "react-art": "18.3.1",
         "react-dom": "18.3.1",
-        "react-native": "0.73.4",
-        "react-native-gesture-handler": "2.16.2",
-        "react-native-tvos": "0.73.6-0",
+        "react-native": "0.76.3",
+        "react-native-gesture-handler": "2.21.2",
+        "react-native-tvos": "0.76.3-0",
         "react-native-web": "0.19.12"
     },
-    "private": false,
     "publishConfig": {
         "access": "public"
     },

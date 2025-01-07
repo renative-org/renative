@@ -60,12 +60,14 @@
         "react-refresh": "0.14.2",
         "resolve": "^1.20.0",
         "resolve-url-loader": "^5.0.0",
+        "rimraf": "2.6.2",
         "sass-loader": "^12.3.0",
         "semver": "^7.5.3",
         "source-map-loader": "4.0.0",
         "style-loader": "^3.3.1",
         "tailwindcss": "^3.0.2",
         "terser-webpack-plugin": "^5.2.5",
+        "typescript": "5.2.2",
         "web-vitals": "^2.1.4",
         "webpack": "^5.94.0",
         "webpack-cli": "4.9.2",
@@ -77,7 +79,6 @@
     "peerDependencies": {
         "@rnv/core": "^1.9.0-rc.0"
     },
-    "private": false,
     "publishConfig": {
         "access": "public"
     }

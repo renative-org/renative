@@ -1,10 +1,6 @@
 {
     "version": "independent",
     "npmClient": "yarn",
-    "useWorkspaces": true,
-    "command": {
-        "bootstrap": {
-            "npmClientArgs": ["--no-package-lock", "--unsafe-perm=true", "--no-optional"]
-        }
-    }
+    "packages": ["packages/*"],
+    "$schema": "node_modules/lerna/schemas/lerna-schema.json"
 }

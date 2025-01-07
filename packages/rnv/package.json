@@ -53,9 +53,7 @@
         "lib",
         "pluginTemplates"
     ],
-    "bin": {
-        "rnv": "./lib/bin.js"
-    },
+    "bin": "./lib/bin.js",
     "repository": {
         "type": "git",
         "url": "git://github.com/flexn-io/renative.git"
@@ -71,9 +69,10 @@
     "dependencies": {
         "@rnv/cli": "1.9.0-rc.0",
         "@rnv/config-templates": "1.9.0-rc.0",
-        "tslib": "2.5.2"
+        "rimraf": "2.6.2",
+        "tslib": "2.5.2",
+        "typescript": "5.2.2"
     },
-    "private": false,
     "publishConfig": {
         "access": "public"
     },

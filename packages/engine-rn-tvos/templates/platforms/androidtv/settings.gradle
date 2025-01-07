@@ -1,3 +1,6 @@
+pluginManagement { includeBuild('{{RN_GRADLE_PLUGIN_LOCATION}}') }
+plugins { id("com.facebook.react.settings") }
+extensions.configure(com.facebook.react.ReactSettingsExtension){ ex -> ex.autolinkLibrariesFromCommand() }
 rootProject.name = '{{RN_GRADLE_PROJECT_NAME}}'
 apply from: file("{{RN_CLI_LOCATION}}/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
 include ':app'

@@ -32,12 +32,13 @@
         "@rnv/sdk-utils": "1.9.0-rc.0",
         "@sentry/integrations": "7.57.0",
         "@sentry/node": "7.57.0",
-        "node-machine-id": "^1.1.12"
+        "node-machine-id": "^1.1.12",
+        "rimraf": "2.6.2",
+        "typescript": "5.2.2"
     },
     "peerDependencies": {
         "@rnv/core": "^1.9.0-rc.0"
     },
-    "private": false,
     "publishConfig": {
         "access": "public"
     }

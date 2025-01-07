@@ -34,12 +34,13 @@
         "iocane": "4.0.0",
         "kill-port": "1.6.1",
         "lodash": "4.17.21",
-        "tar": "6.2.1"
+        "rimraf": "2.6.2",
+        "tar": "6.2.1",
+        "typescript": "5.2.2"
     },
     "peerDependencies": {
         "@rnv/core": "^1.9.0-rc.0"
     },
-    "private": false,
     "publishConfig": {
         "access": "public"
     }

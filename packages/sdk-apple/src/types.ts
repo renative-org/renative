@@ -1,5 +1,5 @@
 import { ConfigPluginPlatformSchema } from '@rnv/core';
-import { Device } from '@react-native-community/cli-platform-ios/build/types';
+import { Device } from '@react-native-community/cli-platform-apple/build/types';
 
 export type AppleDevice = {
     udid?: string;
@@ -11,7 +11,7 @@ export type AppleDevice = {
     modelName?: string;
 };
 
-export type DeviceType = Device & { modelName: string };
+export type DeviceType = Device;
 
 export type Payload = {
     pluginConfigiOS: {

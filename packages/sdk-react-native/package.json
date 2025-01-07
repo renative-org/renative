@@ -31,7 +31,9 @@
     "dependencies": {
         "@react-native/metro-babel-transformer": "^0.74.0",
         "@rnv/sdk-utils": "1.9.0-rc.0",
-        "shell-quote": "1.8.1"
+        "rimraf": "2.6.2",
+        "shell-quote": "1.8.1",
+        "typescript": "5.2.2"
     },
     "peerDependencies": {
         "@react-native/js-polyfills": "^0.74.0",
@@ -39,7 +41,6 @@
         "metro-config": "^0.80.0",
         "metro-runtime": "^0.80.0"
     },
-    "private": false,
     "publishConfig": {
         "access": "public"
     },

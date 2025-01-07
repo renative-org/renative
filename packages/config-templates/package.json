@@ -26,7 +26,6 @@
         "lint": "echo skip",
         "watch": "echo skip"
     },
-    "private": false,
     "publishConfig": {
         "access": "public"
     }

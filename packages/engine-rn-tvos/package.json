@@ -32,17 +32,18 @@
         "watch": "tsc --watch --preserveWatchOutput"
     },
     "dependencies": {
-        "@react-native/babel-preset": "0.73.21",
+        "@react-native/babel-preset": "0.76.3",
         "@rnv/adapter": "1.9.0-rc.0",
         "@rnv/sdk-android": "1.9.0-rc.0",
         "@rnv/sdk-apple": "1.9.0-rc.0",
-        "@rnv/sdk-react-native": "1.9.0-rc.0"
+        "@rnv/sdk-react-native": "1.9.0-rc.0",
+        "rimraf": "2.6.2",
+        "typescript": "5.2.2"
     },
     "peerDependencies": {
         "@rnv/core": "^1.9.0-rc.0",
-        "metro-cache": "^0.78.1"
+        "metro-cache": "^0.81.0"
     },
-    "private": false,
     "publishConfig": {
         "access": "public"
     },

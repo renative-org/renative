@@ -29,10 +29,10 @@
         "watch": "tsc --watch --preserveWatchOutput"
     },
     "dependencies": {
-        "babel-plugin-module-resolver": "^5.0.0"
+        "babel-plugin-module-resolver": "^5.0.0",
+        "rimraf": "2.6.2",
+        "typescript": "5.2.2"
     },
-    "peerDependencies": {},
-    "private": false,
     "publishConfig": {
         "access": "public"
     }

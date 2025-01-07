@@ -32,14 +32,15 @@
     "dependencies": {
         "@rnv/sdk-react-native": "1.9.0-rc.0",
         "@rnv/sdk-utils": "1.9.0-rc.0",
-        "jetifier": "2.0.0"
+        "jetifier": "2.0.0",
+        "rimraf": "2.6.2",
+        "typescript": "5.2.2"
     },
     "peerDependencies": {
-        "@react-native-community/cli": "^12.3.6",
-        "@react-native-community/cli-platform-android": "^12.3.6",
+        "@react-native-community/cli": "^15.0.1",
+        "@react-native-community/cli-platform-android": "^15.0.1",
         "@rnv/core": "^1.9.0-rc.0"
     },
-    "private": false,
     "publishConfig": {
         "access": "public"
     },

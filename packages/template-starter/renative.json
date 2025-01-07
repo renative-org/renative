@@ -49,15 +49,15 @@
         "android": {
             "minSdkVersion": 26,
             "targetSdkVersion": 34,
-            "compileSdkVersion": 34,
-            "buildToolsVersion": "34.0.0",
+            "compileSdkVersion": 35,
+            "buildToolsVersion": "35.0.0",
             "gradleBuildToolsVersion": "4.2.2",
-            "gradleWrapperVersion": "8.3",
-            "ndkVersion": "25.1.8937393",
-            "kotlinVersion": "1.8.0",
+            "gradleWrapperVersion": "8.10.2",
+            "ndkVersion": "26.1.10909125",
+            "kotlinVersion": "1.9.24",
             "reactNativeEngine": "hermes",
             "enableAndroidX": true,
-            "enableJetifier": true,
+            "newArchEnabled": true,
             "templateAndroid": {
                 "gradle_properties": {
                     "android.useDeprecatedNdk": true,
@@ -81,7 +81,7 @@
             "extendPlatform": "android"
         },
         "firetv": {
-            "minSdkVersion": 21,
+            "minSdkVersion": 24,
             "extendPlatform": "android",
             "engine": "engine-rn-tvos",
             "includedPermissions": ["INTERNET"]
@@ -138,6 +138,7 @@
         "react-dom": "source:rnv",
         "react-native-gesture-handler": "source:rnv",
         "@react-native-community/cli-platform-ios": "source:rnv",
+        "@react-native-community/cli-platform-apple": "source:rnv",
         "@react-native-community/cli": "source:rnv",
         "react-native": "source:rnv",
         "next": "source:rnv",

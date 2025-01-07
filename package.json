@@ -56,8 +56,9 @@
         "url": "git://github.com/flexn-io/renative.git"
     },
     "scripts": {
-        "bootstrap": "npx lerna@6 bootstrap && yarn build && yarn link:rnv && yarn generateSchema && yarn resetOverrides",
-        "bootstrap-clean": "yarn clean-gitignore && yarn bootstrap",
+        "bootstrap": "yarn install && yarn setup",
+        "bootstrap-clean": "yarn clean-gitignore && yarn install && yarn setup",
+        "setup": "yarn build && yarn link:rnv && yarn generateSchema && yarn resetOverrides",
         "build": "lerna run build",
         "clean-gitignore": "git clean -f -d -i -X",
         "compile": "npx lerna run compile",
@@ -68,7 +69,7 @@
         "generateSchema": "npx rnv hooks run -x generateSchema && yarn prettier-write-json",
         "link:rnv": "npm r rnv -g && cd packages/rnv && npm link",
         "lint": "npx eslint ./packages",
-        "postinstall": "npx lerna link --force-local && npx jetify && npx husky install",
+        "postinstall": " npx jetify && npx husky install",
         "pre-publish": "yarn build && yarn link:rnv && yarn lint && yarn test && rnv hooks run -x prePublish && rnv hooks run -x gitCommitAndTag && yarn generateSchema",
         "prettier-write-all": "npx prettier '**/*.{js,jsx,ts,tsx,mjs,cjs,json,md}' --write --config .prettierrc.js",
         "prettier-write-json": "npx prettier '**/{package.json,renative.json,renative.**.json,rnv.json,rnv.**.json,renative-1.0.schema.json}' --write --config .prettierrc.js",
@@ -81,6 +82,9 @@
         "watch": "npx lerna exec yarn watch --parallel",
         "watch-alt": "npx lerna run compile & npx lerna watch -- lerna run compile"
     },
+    "workspaces": [
+        "packages/*"
+    ],
     "devDependencies": {
         "@babel/eslint-parser": "7.17.0",
         "@flexn/eslint-config": "1.0.0",
@@ -109,7 +113,7 @@
         "jest": "^29.6.3",
         "jest-environment-jsdom": "29.7.0",
         "json-diff": "1.0.6",
-        "lerna": "^6.6.2",
+        "lerna": "^8.1.9",
         "lint-staged": "12.3.4",
         "madge": "6.1.0",
         "prettier": "2.8.8",
@@ -124,7 +128,7 @@
     },
     "private": true,
     "resolutions": {
-        "@react-native-community/cli-platform-ios": "12.3.6"
+        "@react-native-community/cli-platform-ios": "15.0.1"
     },
     "title": "ReNative",
     "husky": {
@@ -140,20 +144,5 @@
             "eslint"
         ]
     },
-    "workspaces": {
-        "packages": [
-            "packages/*"
-        ],
-        "nohoist": [
-            "html-webpack-plugin",
-            "html-webpack-harddisk-plugin",
-            "webpack",
-            "mini-css-extract-plugin",
-            "execa",
-            "**/@flexn/graybox",
-            "**/appium-*",
-            "**/@wdio/*",
-            "**/@react-native/metro-babel-transformer"
-        ]
-    }
+    "packageManager": "yarn@3.6.4"
 }

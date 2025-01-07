@@ -66,7 +66,7 @@ describe('taskStart', () => {
         // THEN
         expect(startReactNative).toHaveBeenCalledWith({
             waitForBundler: true,
-            customCliPath: 'MOCKED_PATH/local-cli/cli.js',
+            customCliPath: 'MOCKED_PATH/cli.js',
             metroConfigName: 'MOCKED_CONFIG',
         });
     });
@@ -91,7 +91,7 @@ describe('taskStart', () => {
         // THEN
         expect(startReactNative).toHaveBeenCalledWith({
             waitForBundler: false,
-            customCliPath: 'MOCKED_PATH/local-cli/cli.js',
+            customCliPath: 'MOCKED_PATH/cli.js',
             metroConfigName: 'MOCKED_CONFIG',
         });
     });
