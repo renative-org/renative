@@ -39,7 +39,7 @@
         "metro-config": "^0.80.0",
         "metro-runtime": "^0.80.0"
     },
-    "private": false,
+    "private": "false",
     "publishConfig": {
         "access": "public"
     },

@@ -8,10 +8,23 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [18.x]
+                node-version: [20.x, 22.x]
 
         steps:
             - uses: actions/checkout@master
+
+            - name: install system dependencies for canvas
+              run: |
+                  sudo apt-get update
+                  sudo apt-get install -y \
+                  pkg-config \
+                  libcairo2-dev \
+                  libpango1.0-dev \
+                  libpng-dev \
+                  libjpeg-dev \
+                  libgif-dev \
+                  librsvg2-dev
+
             - name: Use Node.js ${{ matrix.node-version }}
               uses: actions/setup-node@v3
               with:

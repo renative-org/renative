@@ -73,7 +73,7 @@
         "@rnv/config-templates": "1.9.0-rc.0",
         "tslib": "2.5.2"
     },
-    "private": false,
+    "private": "false",
     "publishConfig": {
         "access": "public"
     },

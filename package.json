@@ -119,12 +119,12 @@
         "typescript-coverage-report": "0.8.0"
     },
     "engines": {
-        "node": ">=18.0.0",
+        "node": "20 || >=22",
         "npm": ">=9.0.0"
     },
     "private": true,
     "resolutions": {
-        "@react-native-community/cli-platform-ios": "12.3.6"
+        "@react-native-community/cli-platform-ios": "15.0.1"
     },
     "title": "ReNative",
     "husky": {

@@ -57,11 +57,9 @@ export const packageReactNativeIOS = (isDev = false) => {
         args.push('--verbose');
     }
     return executeAsync(
-        `node ${doResolve(
-            c.runtime.runtimeExtraProps?.reactNativePackageName || 'react-native'
-        )}/local-cli/cli.js ${args.join(' ')} --config=${
-            c.runtime.runtimeExtraProps?.reactNativeMetroConfigName || 'metro.config.js'
-        }`,
+        `node ${doResolve(c.runtime.runtimeExtraProps?.reactNativePackageName || 'react-native')}/cli.js ${args.join(
+            ' '
+        )} --config=${c.runtime.runtimeExtraProps?.reactNativeMetroConfigName || 'metro.config.js'}`,
         {
             env: {
                 ...CoreEnvVars.BASE(),

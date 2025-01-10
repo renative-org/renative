@@ -2,6 +2,22 @@ source 'https://github.com/react-native-tvos/react-native-tvos-podspecs.git'
 source 'https://cdn.cocoapods.org/'
 {{INJECT_PLUGIN_PODFILE_SOURCES}}
 
+
+cmake_path = `command -v cmake`
+if cmake_path == ""
+  brew_path = `command -v brew`
+  if brew_path != ""
+    Pod::UI.puts "Installing CMake using brew. This is required to build project.".red
+    `brew install cmake`
+  else
+    Pod::UI.puts "In order to build project locally, you need cmake installed, please install it and try again".red
+    return
+  end
+else
+  Pod::UI.puts "Cmake found at: #{cmake_path}".green
+end
+
+
 # Resolve react_native_pods.rb with node to allow for hoisting
 def node_require(script)
   # Resolve script with node to allow for hoisting
@@ -17,7 +33,7 @@ node_require('react-native-tvos/scripts/react_native_pods.rb')
 
 prepare_react_native_project!
 
-flipper_config = FlipperConfiguration.disabled
+# flipper_config = FlipperConfiguration.disabled
 
 linkage = ENV['USE_FRAMEWORKS']
 if linkage != nil
@@ -63,7 +79,7 @@ target 'RNVApp-tvOS' do
     #
     # Note that if you have use_frameworks! enabled, Flipper will not work and
     # you should disable the next line.
-    :flipper_configuration => flipper_config,
+    # :flipper_configuration => flipper_config,
     # Hermes is now enabled by default. Disable by setting this flag to false.
     :hermes_enabled => {{INJECT_HERMES_ENABLED}},
     # An absolute path to your application root.
@@ -82,7 +98,8 @@ post_install do |installer|
   react_native_post_install(
     installer,
     config[:reactNativePath],
-    :mac_catalyst_enabled => false
+    :mac_catalyst_enabled => false,
+    # :ccache_enabled => true
   )
   {{INJECT_POST_INSTALL}}
 

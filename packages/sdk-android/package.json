@@ -35,11 +35,11 @@
         "jetifier": "2.0.0"
     },
     "peerDependencies": {
-        "@react-native-community/cli": "^12.3.6",
-        "@react-native-community/cli-platform-android": "^12.3.6",
+        "@react-native-community/cli": "^15.0.1",
+        "@react-native-community/cli-platform-android": "^15.0.1",
         "@rnv/core": "^1.9.0-rc.0"
     },
-    "private": false,
+    "private": "false",
     "publishConfig": {
         "access": "public"
     },

@@ -77,7 +77,7 @@
     "peerDependencies": {
         "@rnv/core": "^1.9.0-rc.0"
     },
-    "private": false,
+    "private": "false",
     "publishConfig": {
         "access": "public"
     }

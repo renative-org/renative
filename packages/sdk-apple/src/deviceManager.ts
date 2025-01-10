@@ -18,7 +18,7 @@ const ERROR_MSG = {
 };
 
 export const getAppleDevices = async (ignoreDevices?: boolean, ignoreSimulators?: boolean) => {
-    const listIOSDevices = require('@react-native-community/cli-platform-ios/build/tools/listIOSDevices.js').default;
+    const listIOSDevices = require('@react-native-community/cli-platform-apple/build/tools/listDevices.js').default;
 
     const c = getContext();
     const { platform } = c;
@@ -56,28 +56,31 @@ export const getAppleDevices = async (ignoreDevices?: boolean, ignoreSimulators?
 
 const _parseNewIOSDevicesList = (rawDevices: Array<DeviceType>) => {
     const decideIcon = (device: DeviceType) => {
-        const { modelName } = device;
-        if (modelName?.includes('iPhone') || modelName?.includes('iPod')) {
+        const { name, sdk } = device;
+        if (
+            name?.includes('iPhone') ||
+            name?.includes('iPod') ||
+            sdk?.replace('com.apple.platform.', '') === 'iphoneos'
+        ) {
             return 'Phone 📱';
         }
-        if (modelName?.includes('iPad')) {
+        if (name?.includes('iPad')) {
             return 'Tablet 💊';
         }
-        if (modelName?.includes('Apple TV')) {
+        if (name?.includes('Apple TV') || sdk?.replace('com.apple.platform.', '') === 'appletvos') {
             return 'TV 📺';
         }
         return 'Apple Device';
     };
 
     return rawDevices.map((device): AppleDevice => {
-        const { name, version, udid, type, modelName } = device;
+        const { name, version, udid, type } = device;
         const icon = decideIcon(device);
         return {
             udid,
             name,
             icon,
             version,
-            modelName,
             isDevice: type === 'device',
         };
     });

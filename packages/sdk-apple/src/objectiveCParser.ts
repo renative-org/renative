@@ -84,9 +84,9 @@ export const parseAppDelegate = (
                     isRequired: true,
                     func: '- (NSURL *)sourceURLForBridge:(RCTBridge *)bridge {',
                     begin: `
-            return [self getBundleURL];
+            return [self bundleURL];
         }
-        - (NSURL *)getBundleURL {
+        - (NSURL *)bundleURL {
         #if DEBUG
             return [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index"];
         #else
@@ -179,7 +179,7 @@ export const parseAppDelegate = (
                     end: null,
                 },
             },
-            custom: []
+            custom: [],
         };
 
         const constructMethod = (lines: Array<string>, method: ObjectiveCMethod) => {
@@ -209,7 +209,8 @@ export const parseAppDelegate = (
 
             mk2.forEach((key2) => {
                 const f = method[key2];
-                const lines: Array<PayloadAppDelegateMethod> = c.payload.pluginConfigiOS.appDelegateMmMethods[key][key2] || [];
+                const lines: Array<PayloadAppDelegateMethod> =
+                    c.payload.pluginConfigiOS.appDelegateMmMethods[key][key2] || [];
 
                 const cleanedLines: Record<string, PayloadAppDelegateMethod> = {};
 
@@ -237,14 +238,16 @@ export const parseAppDelegate = (
         });
 
         if (c.payload.pluginConfigiOS.appDelegateMmMethods.custom) {
-            c.payload.pluginConfigiOS.pluginAppDelegateMmMethods += c.payload.pluginConfigiOS.appDelegateMmMethods.custom.join('\n ');
+            c.payload.pluginConfigiOS.pluginAppDelegateMmMethods +=
+                c.payload.pluginConfigiOS.appDelegateMmMethods.custom.join('\n ');
         }
 
         // Root renative.json injections
         injectPluginObjectiveCSync(c, null, '', true);
 
         if (templateXcode?.AppDelegate_mm?.appDelegateMethods?.custom) {
-            c.payload.pluginConfigiOS.pluginAppDelegateMmMethods += templateXcode.AppDelegate_mm.appDelegateMethods.custom.join('\n ');
+            c.payload.pluginConfigiOS.pluginAppDelegateMmMethods +=
+                templateXcode.AppDelegate_mm.appDelegateMethods.custom.join('\n ');
         }
         // end
 
@@ -300,7 +303,12 @@ export const parseAppDelegate = (
         resolve();
     });
 
-export const injectPluginObjectiveCSync = (c: Context, plugin: ConfigPluginPlatformSchema | null, key: string, configProp = false) => {
+export const injectPluginObjectiveCSync = (
+    c: Context,
+    plugin: ConfigPluginPlatformSchema | null,
+    key: string,
+    configProp = false
+) => {
     logDebug(`injectPluginObjectiveCSync:${c.platform}:${key}`);
     const templateXcode = configProp ? getConfigProp('templateXcode') : getFlavouredProp(plugin!, 'templateXcode');
     const appDelegateMmImports = templateXcode?.AppDelegate_mm?.appDelegateImports;

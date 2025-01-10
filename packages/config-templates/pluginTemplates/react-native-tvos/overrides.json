@@ -1,9 +1,7 @@
 {
   "overrides": {
-      "Libraries/Components/ScrollView/ScrollViewNativeComponent.js": {
-          "import Platform from '../../Utilities/Platform';": "\nimport NativeModules from '../../BatchedBridge/NativeModules';",
-          "NativeComponentRegistry.get<Props>(\n    'RCTScrollView'": "NativeComponentRegistry.get<Props>(\n    Platform.isTV && 'RCTScrollViewTV' in NativeModules.UIManager && Platform.OS === 'android' ? 'RCTScrollViewTV' : 'RCTScrollView'",
-          "Platform.OS === 'android'\n    ? {\n        uiViewClassName: 'RCTScrollView'": "Platform.OS === 'android'\n    ? {\n        uiViewClassName: Platform.isTV && 'RCTScrollViewTV' in NativeModules.UIManager ? 'RCTScrollViewTV' : 'RCTScrollView'"
+      "sdks/hermes-engine/hermes-engine.podspec": {
+          "require.resolve(\n  \"react-native\",": "require.resolve(\n  \"react-native-tvos\","
       }
      
   }

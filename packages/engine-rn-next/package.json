@@ -46,7 +46,7 @@
         "react": "^18",
         "react-native-web": "~0.18.0"
     },
-    "private": false,
+    "private": "false",
     "publishConfig": {
         "access": "public"
     }

@@ -455,14 +455,19 @@
         },
         "@react-native-community/cli": {
             "disableNpm": true,
-            "version": "^12.3.6",
+            "version": "15.0.1",
+            "supportedPlatforms": ["tvos", "ios"]
+        },
+        "@react-native-community/cli-platform-apple": {
+            "disableNpm": true,
+            "version": "15.0.1",
             "supportedPlatforms": ["tvos", "ios"]
         },
         "@react-native-community/cli-platform-android": {
-            "version": "^12.3.6"
+            "version": "^15.0.1"
         },
         "@react-native-community/cli-platform-ios": {
-            "version": "12.3.6",
+            "version": "15.0.1",
             "disablePluginTemplateOverrides": false,
             "disableNpm": true,
             "supportedPlatforms": ["tvos", "ios"],
@@ -1555,7 +1560,7 @@
                 "URL_NAME": "",
                 "URL_SCHEME": ""
             },
-            "version": "0.73.4"
+            "version": "0.76.5"
         },
         "react-native-actionsheet": {
             "version": "2.4.2"
@@ -2327,7 +2332,7 @@
             "version": "16.4.5"
         },
         "react-native-gesture-handler": {
-            "version": "2.16.2",
+            "version": "2.21.2",
             "android": {
                 "package": "com.swmansion.gesturehandler.RNGestureHandlerPackage",
                 "path": "{{PLUGIN_ROOT}}/android",
@@ -2463,7 +2468,7 @@
                 "DISABLE_DISCOVERY_AUTOSTART": "false",
                 "START_DISCOVERY_AFTER_FIRST_TAP_ON_CAST_BUTTON": "false"
             },
-            "version": "4.8.0"
+            "version": "4.8.3"
         },
         "react-native-home-indicator": {
             "ios": {
@@ -2900,7 +2905,7 @@
             "tvos": {
                 "podName": "RNPermissions"
             },
-            "version": "4.1.5"
+            "version": "5.2.1"
         },
         "react-native-permissions-pods": {
             "ios": {
@@ -3081,7 +3086,7 @@
             "webpackConfig": {
                 "modulePaths": true
             },
-            "version": "4.10.3"
+            "version": "5.0.0"
         },
         "react-native-safe-area-view": {
             "version": "4.9.0",
@@ -3358,7 +3363,7 @@
             }
         },
         "react-native-tvos": {
-            "version": "0.73.6-0",
+            "version": "0.76.5-0",
             "supportedPlatforms": ["tvos", "firetv", "androidtv"]
         },
         "react-native-tvos-controller": {
@@ -3579,7 +3584,7 @@
             "version": "0.40.1"
         },
         "react-native-windows": {
-            "version": "0.67.3"
+            "version": "0.76.2"
         },
         "react-native-zip-archive": {
             "android": {
@@ -3681,7 +3686,7 @@
         "Sentry": {
             "ios": {
                 "podName": "Sentry",
-                "version": "5.2.0"
+                "version": "6.4.0"
             },
             "disableNpm": true
         },

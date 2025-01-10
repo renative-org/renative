@@ -10,6 +10,7 @@ export type NpmPackageFile = {
     description?: string;
     name?: string;
     main?: string;
+    packageManager?: string;
 };
 
 export type NpmPackageFileKey = keyof NpmPackageFile;

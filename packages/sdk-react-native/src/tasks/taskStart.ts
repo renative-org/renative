@@ -18,7 +18,7 @@ export default createTask({
         let metroConfigName: string | undefined;
         const { reactNativePackageName, reactNativeMetroConfigName } = ctx.runtime?.runtimeExtraProps || {};
         if (reactNativePackageName) {
-            customCliPath = `${doResolve(reactNativePackageName)}/local-cli/cli.js`;
+            customCliPath = `${doResolve(reactNativePackageName)}/cli.js`;
         }
         if (reactNativeMetroConfigName) {
             metroConfigName = reactNativeMetroConfigName;

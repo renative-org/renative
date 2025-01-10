@@ -27,6 +27,7 @@
         "watch": "tsc --watch --preserveWatchOutput"
     },
     "dependencies": {
+        "rimraf": "2.6.2",
         "simple-git": "3.24.0"
     },
     "peerDependencies": {

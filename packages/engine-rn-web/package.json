@@ -32,7 +32,7 @@
         "watch": "tsc --watch --preserveWatchOutput"
     },
     "dependencies": {
-        "@react-native/babel-preset": "0.73.21",
+        "@react-native/babel-preset": "0.76.5",
         "@rnv/adapter": "1.9.0-rc.0",
         "@rnv/sdk-kaios": "1.9.0-rc.0",
         "@rnv/sdk-tizen": "1.9.0-rc.0",
@@ -44,7 +44,7 @@
     "peerDependencies": {
         "@rnv/core": "^1.9.0-rc.0"
     },
-    "private": false,
+    "private": "false",
     "publishConfig": {
         "access": "public"
     }

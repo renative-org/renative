@@ -1,4 +1,4 @@
-import { Env } from '@rnv/core';
+import { Env, fsExistsSync } from '@rnv/core';
 import { withMetroConfig, mergeConfig, InputConfig } from '@rnv/sdk-react-native';
 
 // TODO merge with packages/engine-rn-macos/src/adapters/metroAdapter.ts and place in @rnv/sdk-react-native
@@ -33,8 +33,8 @@ export const withRNVMetro = (config: InputConfig): InputConfig => {
     const projectPath = env.RNV_PROJECT_ROOT || process.cwd();
 
     const defaultConfig = withMetroConfig(projectPath);
-
-    const watchFolders = [path.resolve(projectPath, 'node_modules')];
+    const projectNodeModulesPath = path.resolve(projectPath, 'node_modules');
+    const watchFolders = fsExistsSync(projectNodeModulesPath) ? [projectNodeModulesPath] : [];
 
     if (env.RNV_IS_MONOREPO === 'true' || env.RNV_IS_MONOREPO === true) {
         const monoRootPath = env.RNV_MONO_ROOT || projectPath;
@@ -88,6 +88,5 @@ export const withRNVMetro = (config: InputConfig): InputConfig => {
     };
 
     const cnf = mergeConfig(defaultConfig, config, cnfRnv);
-
     return cnf;
 };

@@ -88,6 +88,7 @@
             }
         },
         "android": {
+            "enableJetifier": true,
             "templateAndroid": {
                 "build_gradle": {
                     "buildscript": {

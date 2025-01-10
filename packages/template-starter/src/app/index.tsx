@@ -11,7 +11,7 @@ const App = () => (
 );
 
 const AppThemed = () => {
-    const buttonRef = useRef<TouchableOpacity>(null);
+    const buttonRef = useRef<React.ElementRef<typeof TouchableOpacity>>(null);
     const { theme, toggle, dark } = useContext(ThemeContext);
     const [pixelRatio, setPixelRatio] = useState(1);
     const [fontScale, setFontScale] = useState(1);
