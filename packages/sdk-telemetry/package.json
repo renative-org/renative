@@ -1,6 +1,6 @@
 {
     "name": "@rnv/sdk-telemetry",
-    "version": "1.9.0-rc.1",
+    "version": "1.9.0",
     "description": "ReNative Telemetry SDK",
     "keywords": [],
     "homepage": "https://github.com/flexn-io/renative#readme",
@@ -29,13 +29,13 @@
         "watch": "tsc --watch --preserveWatchOutput"
     },
     "dependencies": {
-        "@rnv/sdk-utils": "1.9.0-rc.1",
+        "@rnv/sdk-utils": "1.9.0",
         "@sentry/integrations": "7.57.0",
         "@sentry/node": "7.57.0",
         "node-machine-id": "^1.1.12"
     },
     "peerDependencies": {
-        "@rnv/core": "^1.9.0-rc.1"
+        "@rnv/core": "^1.9.0"
     },
     "private": false,
     "publishConfig": {

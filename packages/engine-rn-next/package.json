@@ -1,6 +1,6 @@
 {
     "name": "@rnv/engine-rn-next",
-    "version": "1.9.0-rc.1",
+    "version": "1.9.0",
     "description": "ReNative Engine to build next based platforms with react native support.",
     "keywords": [
         "nextjs",
@@ -33,15 +33,15 @@
         "watch": "tsc --watch --preserveWatchOutput"
     },
     "dependencies": {
-        "@rnv/adapter": "1.9.0-rc.1",
-        "@rnv/sdk-utils": "1.9.0-rc.1",
+        "@rnv/adapter": "1.9.0",
+        "@rnv/sdk-utils": "1.9.0",
         "babel-preset-expo": "9.5.2",
         "next-fonts": "1.5.1",
         "next-images": "1.8.4",
         "webpack": "^5.94.0"
     },
     "peerDependencies": {
-        "@rnv/core": "^1.9.0-rc.1",
+        "@rnv/core": "^1.9.0",
         "next": "^14",
         "react": "^18",
         "react-native-web": "~0.18.0"

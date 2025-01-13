@@ -1,6 +1,6 @@
 {
     "name": "@rnv/integration-docker",
-    "version": "1.9.0-rc.1",
+    "version": "1.9.0",
     "description": "Gives RNV the possibility to deploy web apps as a Docker image published to dockerhub",
     "keywords": [
         "docker",
@@ -32,7 +32,7 @@
     "dependencies": {},
     "devDependencies": {},
     "peerDependencies": {
-        "@rnv/core": "^1.9.0-rc.1"
+        "@rnv/core": "^1.9.0"
     },
     "publishConfig": {
         "access": "public"

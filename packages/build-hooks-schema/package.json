@@ -31,7 +31,7 @@
         "zod-to-json-schema": "3.23.0"
     },
     "peerDependencies": {
-        "@rnv/core": "^1.9.0-rc.1"
+        "@rnv/core": "^1.9.0"
     },
     "publishConfig": {
         "access": "public"

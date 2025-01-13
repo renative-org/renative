@@ -1,6 +1,6 @@
 {
     "name": "@rnv/renative",
-    "version": "1.9.0-rc.1",
+    "version": "1.9.0",
     "description": "🚀🚀🚀 Unified Development Platform. Bootstrap, Develop & Deploy `iOS`, `tvOS`, `Android`, `Android TV`, `FireTV`, `Android Wear`, `Web`, `Tizen TV`, `Tizen Watch`, `LG webOS`, `macOS/OSX`, `Windows`, `KaiOS`, and `Linux` platforms",
     "keywords": [
         "android tv",

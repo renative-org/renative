@@ -1,6 +1,6 @@
 {
     "name": "@rnv/engine-lightning",
-    "version": "1.9.0-rc.1",
+    "version": "1.9.0",
     "description": "ReNative Engine to build lightning based apps.",
     "keywords": [
         "lightning"
@@ -34,12 +34,12 @@
     "dependencies": {
         "@lightningjs/cli": "2.13.0",
         "@lightningjs/sdk": "5.5.1",
-        "@rnv/sdk-tizen": "1.9.0-rc.1",
-        "@rnv/sdk-utils": "1.9.0-rc.1",
-        "@rnv/sdk-webos": "1.9.0-rc.1"
+        "@rnv/sdk-tizen": "1.9.0",
+        "@rnv/sdk-utils": "1.9.0",
+        "@rnv/sdk-webos": "1.9.0"
     },
     "peerDependencies": {
-        "@rnv/core": "^1.9.0-rc.1"
+        "@rnv/core": "^1.9.0"
     },
     "private": false,
     "publishConfig": {
