@@ -1,6 +1,6 @@
 {
     "name": "@rnv/sdk-webpack",
-    "version": "1.9.0-rc.0",
+    "version": "1.10.0-rc.0",
     "description": "ReNative Webpack SDK",
     "keywords": [],
     "homepage": "https://github.com/flexn-io/renative#readme",
@@ -31,7 +31,7 @@
     },
     "dependencies": {
         "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
-        "@rnv/sdk-utils": "1.9.0-rc.0",
+        "@rnv/sdk-utils": "1.10.0-rc.0",
         "@svgr/webpack": "6.3.1",
         "bfj": "^7.0.2",
         "browserslist": "^4.18.1",
@@ -75,7 +75,7 @@
         "workbox-webpack-plugin": "6.5.4"
     },
     "peerDependencies": {
-        "@rnv/core": "^1.9.0-rc.0"
+        "@rnv/core": "^1.10.0-rc.0"
     },
     "private": false,
     "publishConfig": {

@@ -1,6 +1,6 @@
 {
     "name": "@rnv/sdk-react-native",
-    "version": "1.9.0-rc.0",
+    "version": "1.10.0-rc.0",
     "description": "ReNative React-Native SDK",
     "keywords": [],
     "homepage": "https://github.com/flexn-io/renative#readme",
@@ -30,12 +30,12 @@
     },
     "dependencies": {
         "@react-native/metro-babel-transformer": "^0.74.0",
-        "@rnv/sdk-utils": "1.9.0-rc.0",
+        "@rnv/sdk-utils": "1.10.0-rc.0",
         "shell-quote": "1.8.1"
     },
     "peerDependencies": {
         "@react-native/js-polyfills": "^0.74.0",
-        "@rnv/core": "^1.9.0-rc.0",
+        "@rnv/core": "^1.10.0-rc.0",
         "metro-config": "^0.80.0",
         "metro-runtime": "^0.80.0"
     },

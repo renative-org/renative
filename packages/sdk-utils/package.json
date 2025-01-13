@@ -1,6 +1,6 @@
 {
     "name": "@rnv/sdk-utils",
-    "version": "1.9.0-rc.0",
+    "version": "1.10.0-rc.0",
     "description": "ReNative SDK Utils",
     "keywords": [],
     "homepage": "https://github.com/flexn-io/renative#readme",
@@ -37,7 +37,7 @@
         "kill-port": "1.6.1"
     },
     "peerDependencies": {
-        "@rnv/core": "^1.9.0-rc.0"
+        "@rnv/core": "^1.10.0-rc.0"
     },
     "private": false,
     "publishConfig": {
