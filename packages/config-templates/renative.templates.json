@@ -10,35 +10,35 @@
     },
     "engineTemplates": {
         "@rnv/engine-rn": {
-            "version": "1.9.0-rc.0",
+            "version": "1.10.0-rc.0",
             "id": "engine-rn"
         },
         "@rnv/engine-rn-tvos": {
-            "version": "1.9.0-rc.0",
+            "version": "1.10.0-rc.0",
             "id": "engine-rn-tvos"
         },
         "@rnv/engine-rn-web": {
-            "version": "1.9.0-rc.0",
+            "version": "1.10.0-rc.0",
             "id": "engine-rn-web"
         },
         "@rnv/engine-rn-next": {
-            "version": "1.9.0-rc.0",
+            "version": "1.10.0-rc.0",
             "id": "engine-rn-next"
         },
         "@rnv/engine-rn-electron": {
-            "version": "1.9.0-rc.0",
+            "version": "1.10.0-rc.0",
             "id": "engine-rn-electron"
         },
         "@rnv/engine-lightning": {
-            "version": "1.9.0-rc.0",
+            "version": "1.10.0-rc.0",
             "id": "engine-lightning"
         },
         "@rnv/engine-rn-macos": {
-            "version": "1.9.0-rc.0",
+            "version": "1.10.0-rc.0",
             "id": "engine-rn-macos"
         },
         "@rnv/engine-rn-windows": {
-            "version": "1.9.0-rc.0",
+            "version": "1.10.0-rc.0",
             "id": "engine-rn-windows"
         }
     },
@@ -986,7 +986,7 @@
             "version": "^1.8.1"
         },
         "@rnv/renative": {
-            "version": "1.9.0-rc.0"
+            "version": "1.10.0-rc.0"
         },
         "@sentry/react": {
             "version": "6.13.3"

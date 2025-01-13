@@ -1,6 +1,6 @@
 {
     "name": "@rnv/config-templates",
-    "version": "1.9.0-rc.0",
+    "version": "1.10.0-rc.0",
     "description": "ReNative configuration templates for plugins, platforms, engines and project template endpoints",
     "keywords": [],
     "homepage": "https://github.com/flexn-io/renative#readme",

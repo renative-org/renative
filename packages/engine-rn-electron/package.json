@@ -1,6 +1,6 @@
 {
     "name": "@rnv/engine-rn-electron",
-    "version": "1.9.0-rc.0",
+    "version": "1.10.0-rc.0",
     "description": "ReNative Engine to build electron based platforms with react native support.",
     "keywords": [
         "electron",
@@ -34,17 +34,17 @@
     },
     "dependencies": {
         "@react-native/babel-preset": "0.73.21",
-        "@rnv/adapter": "1.9.0-rc.0",
-        "@rnv/sdk-react-native": "1.9.0-rc.0",
-        "@rnv/sdk-utils": "1.9.0-rc.0",
-        "@rnv/sdk-webpack": "1.9.0-rc.0",
+        "@rnv/adapter": "1.10.0-rc.0",
+        "@rnv/sdk-react-native": "1.10.0-rc.0",
+        "@rnv/sdk-utils": "1.10.0-rc.0",
+        "@rnv/sdk-webpack": "1.10.0-rc.0",
         "electron": "26.3.0",
         "electron-builder": "24.13.3",
         "electron-notarize": "1.2.2",
         "metro-react-native-babel-preset": "0.76.8"
     },
     "peerDependencies": {
-        "@rnv/core": "^1.9.0-rc.0"
+        "@rnv/core": "^1.10.0-rc.0"
     },
     "private": false,
     "publishConfig": {
